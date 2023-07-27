@@ -33,7 +33,7 @@ class CustomUser(AbstractUser):
     phone_number = models.CharField(max_length=20, unique=True)
     photo = models.ImageField(upload_to='profile_photos/', blank=True, null=True)
 
-    USERNAME_FIELD = 'phone_number'  # Set to 'phone_number' for phone number login
+    USERNAME_FIELD = 'phone_number' #setting user field inorder to login using phone number
     REQUIRED_FIELDS = ['name', 'email']
 
     objects = CustomUserManager()
